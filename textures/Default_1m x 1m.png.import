@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u33njqruvuk3"
-path.s3tc="res://.godot/imported/rogue_texture.png-b31b4e5cf9e5524bb2b13cc8537e200c.s3tc.ctex"
+uid="uid://bn5j8ltqa4sxt"
+path.s3tc="res://.godot/imported/Default_1m x 1m.png-bb65068a7b90fb5114c7287f9be6860b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/gltf/rogue_texture.png"
-dest_files=["res://.godot/imported/rogue_texture.png-b31b4e5cf9e5524bb2b13cc8537e200c.s3tc.ctex"]
+source_file="res://textures/Default_1m x 1m.png"
+dest_files=["res://.godot/imported/Default_1m x 1m.png-bb65068a7b90fb5114c7287f9be6860b.s3tc.ctex"]
 
 [params]
 

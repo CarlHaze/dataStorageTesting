@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsr3vayo04uhc"]
+
+[ext_resource type="PackedScene" uid="uid://di8fqsa6m7x6q" path="res://scenes/character.tscn" id="1_aebvm"]
+[ext_resource type="Texture2D" uid="uid://bn5j8ltqa4sxt" path="res://textures/Default_1m x 1m.png" id="1_ceo5w"]
+[ext_resource type="PackedScene" uid="uid://bt8vr322clj50" path="res://scenes/pickup.tscn" id="3_j2q4v"]
+[ext_resource type="Resource" uid="uid://dpgd8hpba7ma6" path="res://items/axe.tres" id="4_crhjs"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kabjr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkwg8"]
+albedo_color = Color(0.0745098, 0.427451, 0.0823529, 1)
+albedo_texture = ExtResource("1_ceo5w")
+
+[node name="Level" type="Node3D"]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+use_collision = true
+mesh = SubResource("PlaneMesh_kabjr")
+material = SubResource("StandardMaterial3D_hkwg8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.505808, 0.862646, 0, -0.862646, 0.505808, 0, 2.92047, 1.5227)
+
+[node name="Character" parent="." instance=ExtResource("1_aebvm")]
+transform = Transform3D(0.0803729, 0, 0.996765, 0, 1, 0, -0.996765, 0, 0.0803729, 5.75354, 1.25939, -1.5871)
+
+[node name="Pickup" parent="." instance=ExtResource("3_j2q4v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1848, 0.969108, -1.69771)
+
+[node name="Pickup2" parent="." instance=ExtResource("3_j2q4v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1848, 0.969108, 3.30229)
+item = ExtResource("4_crhjs")

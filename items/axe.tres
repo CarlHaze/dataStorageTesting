@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dpgd8hpba7ma6"]
+
+[ext_resource type="PackedScene" uid="uid://dub66g1jt57e5" path="res://assets/gltf/axe_1handed.gltf" id="1_f48yo"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_u70xr"]
+
+[resource]
+script = ExtResource("1_u70xr")
+name = "Axe"
+scene = ExtResource("1_f48yo")

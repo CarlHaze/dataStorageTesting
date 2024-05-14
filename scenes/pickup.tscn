@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt8vr322clj50"]
+
+[ext_resource type="Script" path="res://scripts/pickup.gd" id="1_napf0"]
+[ext_resource type="Resource" uid="uid://bfecidxfp503h" path="res://items/sword_1handed.tres" id="2_dxag2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ryfx5"]
+
+[node name="Pickup" type="Node3D"]
+script = ExtResource("1_napf0")
+item = ExtResource("2_dxag2")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_ryfx5")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
