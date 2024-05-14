@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d273gb702d4ud"]
+
+[ext_resource type="PackedScene" uid="uid://nk7gyylbatb3" path="res://Assets/gltf/sword_1handed.gltf" id="1_t53e6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_um4f0"]
+
+[node name="Sword" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="sword_1handed2" parent="Area3D" instance=ExtResource("1_t53e6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.61226, 0)
+shape = SubResource("CapsuleShape3D_um4f0")
